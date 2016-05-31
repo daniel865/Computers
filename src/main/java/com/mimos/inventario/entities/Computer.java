@@ -88,4 +88,18 @@ public class Computer {
     public void setNameManufacturer(String nameManufacturer) {
         this.nameManufacturer = nameManufacturer;
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "id=" + id +
+                ", serial='" + serial + '\'' +
+                ", model='" + model + '\'' +
+                ", networkName='" + networkName + '\'' +
+                ", idUser=" + idUser +
+                ", userName='" + userName + '\'' +
+                ", idManufacturer=" + idManufacturer +
+                ", nameManufacturer='" + nameManufacturer + '\'' +
+                '}';
+    }
 }
