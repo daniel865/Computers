@@ -3,4 +3,41 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <servlet>
+        <servlet-name>ServletCreateComputer</servlet-name>
+        <servlet-class>com.mimos.inventario.servlets.ServletCreateComputer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCreateComputer</servlet-name>
+        <url-pattern>/createComputer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletSearchComputer</servlet-name>
+        <servlet-class>com.mimos.inventario.servlets.ServletSearchComputer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletSearchComputer</servlet-name>
+        <url-pattern>/searchComputer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletUpdateComputer</servlet-name>
+        <servlet-class>com.mimos.inventario.servlets.ServletUpdateComputer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletUpdateComputer</servlet-name>
+        <url-pattern>/updateComputer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDeleteComputer</servlet-name>
+        <servlet-class>com.mimos.inventario.servlets.ServletDeleteComputer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDeleteComputer</servlet-name>
+        <url-pattern>/deleteComputer.do</url-pattern>
+    </servlet-mapping>
+
 </web-app>
