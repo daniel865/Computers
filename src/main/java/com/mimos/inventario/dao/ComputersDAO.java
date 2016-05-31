@@ -6,6 +6,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -73,6 +75,35 @@ public class ComputersDAO extends BaseDAO {
             connectionManager.close(connection);
         }
         return null;
+    }
+
+    public List<Computer> loadComputers()throws Exception {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet rs;
+        List<Computer> computerList = new ArrayList<Computer>();
+        try {
+            connection = connectionManager.connect();
+            statement = connection.prepareStatement("SELECT * FROM COMPUTADORES");
+            rs = statement.executeQuery();
+            while (rs.next()){
+                computerList.add(new Computer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5),
+                        null, rs.getInt(6), null));
+            }
+            return computerList;
+        }catch (Exception e){
+            Logger.getLogger(ComputersDAO.class.getName()).log(Level.SEVERE, null, e);
+            throw new Exception("Error loading computers", e);
+        }finally {
+            try {
+                if(statement != null){
+                    statement.close();
+                }
+            }catch (SQLException ex){
+                Logger.getLogger(ComputersDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            connectionManager.close(connection);
+        }
     }
 
     public void modifyComputer(Computer computer)throws Exception{
