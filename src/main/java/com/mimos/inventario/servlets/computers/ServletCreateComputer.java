@@ -1,4 +1,4 @@
-package com.mimos.inventario.servlets;
+package com.mimos.inventario.servlets.computers;
 
 import com.mimos.inventario.dao.ComputersDAO;
 import com.mimos.inventario.dao.ConnectionFactory;
