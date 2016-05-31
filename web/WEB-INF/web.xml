@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>ServletCreateComputer</servlet-name>
-        <servlet-class>com.mimos.inventario.servlets.ServletCreateComputer</servlet-class>
+        <servlet-class>com.mimos.inventario.servlets.computers.ServletCreateComputer</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletCreateComputer</servlet-name>
@@ -15,7 +15,7 @@
 
     <servlet>
         <servlet-name>ServletSearchComputer</servlet-name>
-        <servlet-class>com.mimos.inventario.servlets.ServletSearchComputer</servlet-class>
+        <servlet-class>com.mimos.inventario.servlets.computers.ServletSearchComputer</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletSearchComputer</servlet-name>
@@ -24,7 +24,7 @@
 
     <servlet>
         <servlet-name>ServletUpdateComputer</servlet-name>
-        <servlet-class>com.mimos.inventario.servlets.ServletUpdateComputer</servlet-class>
+        <servlet-class>com.mimos.inventario.servlets.computers.ServletUpdateComputer</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletUpdateComputer</servlet-name>
@@ -33,7 +33,7 @@
 
     <servlet>
         <servlet-name>ServletDeleteComputer</servlet-name>
-        <servlet-class>com.mimos.inventario.servlets.ServletDeleteComputer</servlet-class>
+        <servlet-class>com.mimos.inventario.servlets.computers.ServletDeleteComputer</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletDeleteComputer</servlet-name>

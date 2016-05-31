@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.mimos.inventario.entities.Computer" %><%--
   Created by IntelliJ IDEA.
   User: Daniel
   Date: 28/05/2016
@@ -7,6 +8,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<%
+    String message = request.getAttribute("message") != null ? (String) request.getAttribute("message") : null;
+    String id = request.getAttribute("id") != null ? (String) request.getAttribute("id") : null;
+    String serial = request.getAttribute("serial") != null ? (String) request.getAttribute("serial") : null;
+    String model = request.getAttribute("model") != null ? (String) request.getAttribute("model") : null;
+    String networkName = request.getAttribute("networkName") != null ? (String) request.getAttribute("networkName") : null;
+    String idUser = request.getAttribute("idUser") != null ? (String) request.getAttribute("idUser") : null;
+    String userName = request.getAttribute("userName") != null ? (String) request.getAttribute("userName") : null;
+    String idManufacturer = request.getAttribute("idManufacturer") != null ? (String) request.getAttribute("idManufacturer") : null;
+    String nameManufacturer = request.getAttribute("nameManufacturer") != null ? (String) request.getAttribute("nameManufacturer") : null;
+    List<Computer> computerList = request.getAttribute("computerList") != null ? (List<Computer>) request.getAttribute("computerList") : null;
+%>
   <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,9 +60,12 @@
           <div class="col-sm-3 col-md-2 sidebar">
               <ul class="nav nav-sidebar">
                   <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                  <li><a href="#">Reports</a></li>
-                  <li><a href="#">Analytics</a></li>
-                  <li><a href="#">Export</a></li>
+                  <li><a href="#">Placas Madres</a></li>
+                  <li><a href="#">Procesadores</a></li>
+                  <li><a href="#">RAMs</a></li>
+                  <li><a href="#">Discos Duros</a></li>
+                  <li><a href="#">Tarjetas de RED</a></li>
+                  <li><a href="#">Usuarios</a></li>
               </ul>
           </div>
           <div class="row">

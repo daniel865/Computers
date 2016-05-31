@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="Computers:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/Computers_war_exploded</output-path>
-    <root id="archive" name="Computers_war exploded.war">
+    <root id="archive" name="Computers.war">
       <element id="javaee-facet-resources" facet="Computers/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
