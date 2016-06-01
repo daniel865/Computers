@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!-- Servlets for Computers -->
     <servlet>
         <servlet-name>ServletCreateComputer</servlet-name>
         <servlet-class>com.mimos.inventario.servlets.computers.ServletCreateComputer</servlet-class>
@@ -38,6 +39,25 @@
     <servlet-mapping>
         <servlet-name>ServletDeleteComputer</servlet-name>
         <url-pattern>/deleteComputer.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletLoadComputers</servlet-name>
+        <servlet-class>com.mimos.inventario.servlets.computers.ServletLoadComputers</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLoadComputers</servlet-name>
+        <url-pattern>/loadComputers.do</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlets for Manufacturers -->
+    <servlet>
+        <servlet-name>ServletLoadManufacturer</servlet-name>
+        <servlet-class>com.mimos.inventario.servlets.manufacturers.ServletLoadManufacturer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLoadManufacturer</servlet-name>
+        <url-pattern>/loadManufacturer.do</url-pattern>
     </servlet-mapping>
 
 </web-app>
