@@ -2,9 +2,12 @@ package com.mimos.inventario.servlets.computers;
 
 import com.mimos.inventario.dao.ComputersDAO;
 import com.mimos.inventario.dao.ConnectionFactory;
+import com.mimos.inventario.dao.ManufacturerDAO;
 import com.mimos.inventario.entities.Computer;
+import com.mimos.inventario.entities.Manufacturer;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,6 +35,7 @@ public class ServletLoadComputers extends javax.servlet.http.HttpServlet {
             Logger.getLogger(ServletLoadComputers.class.getName()).log(Level.SEVERE, null, e);
             request.setAttribute("message", "Error al cargar los computadores");
         }
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 
 }
