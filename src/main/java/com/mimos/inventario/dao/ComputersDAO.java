@@ -84,11 +84,14 @@ public class ComputersDAO extends BaseDAO {
         List<Computer> computerList = new ArrayList<Computer>();
         try {
             connection = connectionManager.connect();
-            statement = connection.prepareStatement("SELECT * FROM COMPUTADORES");
+            statement = connection.prepareStatement("SELECT ID_COM, SERIAL_COM, MODELO_COM, NOMBRE_RED_COM, USUARIO_COM, " +
+                    " FABRICANTE_COM, ID_FAB, NOMBRE_FAB" +
+                    " FROM COMPUTADORES, FABRICANTES" +
+                    " WHERE FABRICANTE_COM = ID_FAB");
             rs = statement.executeQuery();
             while (rs.next()){
                 computerList.add(new Computer(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5),
-                        null, rs.getInt(6), null));
+                        rs.getString(6), rs.getInt(7), rs.getString(8)));
             }
             return computerList;
         }catch (Exception e){
