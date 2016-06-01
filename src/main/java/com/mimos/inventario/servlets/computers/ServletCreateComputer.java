@@ -15,7 +15,7 @@ public class ServletCreateComputer extends javax.servlet.http.HttpServlet {
 
     private final static String user = "us_comp";
     private final static String password = "1234";
-    private final static String url = "jdbc:oracle:thin:@localhost:1521:XE";
+    private final static String url = "jdbc:oracle:thin:@192.168.99.100:1521:XE";
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         ComputersDAO computersDAO = new ComputersDAO(new ConnectionFactory(user, password, url));
