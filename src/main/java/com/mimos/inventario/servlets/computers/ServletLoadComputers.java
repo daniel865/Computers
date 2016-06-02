@@ -19,7 +19,7 @@ public class ServletLoadComputers extends javax.servlet.http.HttpServlet {
 
     private final static String user = "us_comp";
     private final static String password = "1234";
-    private final static String url = "jdbc:oracle:thin:@192.168.99.100:1521:XE";
+    private final static String url = "jdbc:oracle:thin:@db_mimos:1521:XE";
 
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException{
 
