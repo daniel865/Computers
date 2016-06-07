@@ -41,7 +41,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var idManufacturer = '<%=idManufacturer%>';
-        var idUser = '<%=%>idUser%>';
+        var idUser = '<%=idUser%>';
         $("#idManufacturer option[value=" + idManufacturer + "]").attr("selected", true);
         $("#idUser option[value=" + idUser + "]").attr("selected", true);
     })
