@@ -39,7 +39,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Inventario mimos</a>
+              <a class="navbar-brand" href="<%=request.getContextPath()%>/loadComputers.do">Inventario mimos</a>
           </div>
       </div>
   </nav>
@@ -83,7 +83,7 @@
                           <td><%=computer.getModel()%></td>
                           <td><%=computer.getNameManufacturer()%></td>
                           <td>
-                              <a class="btn btn-info mini blue-stripe" href="#">Edit</a>
+                              <a class="btn btn-info mini blue-stripe" href="<%=request.getContextPath()%>/searchComputer.do?serial=<%=computer.getSerial()%>">Edit</a>
                               <a href="#" class="btn btn-danger mini red-stripe">Delete</a>
                           </td>
                       </tr>
